@@ -1,0 +1,34 @@
+extends layout
+
+block content
+
+  #fullPage
+    .s1
+      h1 Erstens
+    .s2
+      h1 Zweitns
+    .s3
+      h1 Drittns
+
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.14/fullpage.min.js' integrity='sha512-JEyqsBTR2woLAr79cq9g77k5aviE4ffJUwQ52NRRIsXQz5Xp2Am7vJD99hhc2q7lhvG0XCYs1cDGvl8d/t669Q==' crossorigin='anonymous' referrerpolicy='no-referrer')
+
+  script.
+    new fullpage("#fullPage", {
+          licenseKey: "gplv3-license",
+          autoScrolling: true,
+    })
+
+  div(style='width:30%;')
+    canvas#barChart(width='400' height='400')
+    button#timeScaleBar Monate
+    canvas#pieChart(width='400' height='400')
+    button#timeScalePie Monate
+  
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js')
+
+  script(src='../javascripts/barChart.js', data={data})
+
+  script(src='../javascripts/pieChart.js', data={data})
+
+  
+

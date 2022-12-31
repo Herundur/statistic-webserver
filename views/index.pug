@@ -1,0 +1,82 @@
+extends layout
+
+block content
+
+  #fullPage
+
+    // Home Screen
+    .section
+      
+      //Banura Logo Animation
+      #mouse_move
+        div
+          img(id="img1" class="mouse" value="2" src="../images/banura-logo-without-b.png")
+        div
+          img(id="img2" class="mouse" value="3" src="../images/banura-sign.png")
+
+      script.
+        document.addEventListener("mousemove", parallax);
+        function parallax(event) {
+          this.querySelectorAll(".mouse").forEach((shift) => {
+            const position = shift.getAttribute("value");
+            const x = (window.innerWidth - event.pageX * position) / 90;
+            const y = (window.innerHeight - event.pageY * position) / 90;
+    
+            shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+          });
+        }
+
+      // Discord Button Hyper Link
+      div#discordButton
+        span.dot
+        div
+          a(href='https://discord.gg/xDcNMas9GP' target="_blank")
+            img(id="discordLogo" src='../images/discord-logo.png' alt='Banura-Discord-Invitelink' width='50')
+
+    // Alle Nutzer- & Botnachrichten
+    .section
+
+      // Line Graph Paragraph
+      p(style="white-space:pre;" id="paragraphLine" class="rightFadeIn") Line Graph Pragraph
+
+      // Line Graph
+      div(id="graphLine")
+        canvas#lineChart
+        div#centerLineButton
+          button#timeScaleLine Jahr
+
+    // Nutzerdaten
+    .section
+
+      // Pie Chart Paragraph
+      p(style="white-space:pre;" id="paragraphPie" class="leftFadeIn") Pie Graph Pragraph
+
+      // Pie Chart
+      div(id="graphPie")
+        canvas#pieChart()
+        div#centerPieButton
+          button#timeScalePie Woche
+
+  // SCRIPTS
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.14/fullpage.min.js' integrity='sha512-JEyqsBTR2woLAr79cq9g77k5aviE4ffJUwQ52NRRIsXQz5Xp2Am7vJD99hhc2q7lhvG0XCYs1cDGvl8d/t669Q==' crossorigin='anonymous' referrerpolicy='no-referrer')
+
+  script.
+    new fullpage("#fullPage", {
+          licenseKey: "gplv3-license",
+          sectionsColor: ['#1E1E1E', '#1E1E1E', '#1E1E1E'],
+          autoScrolling: true,
+          credits: { enabled: false, label: 'Made with fullPage.js', position: 'right'},
+          navigation: true,
+          navigationTooltips: ['Home', 'Alle Nutzer- & Botnachrichten', "Nutzerdaten"],
+    })
+  
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js')
+
+  script(src='../javascripts/scrollAnimation.js')
+
+  script(src='../javascripts/barChart.js', data={data}, lineCount={lineCount}, lineDate={lineDate})
+
+  script(src='../javascripts/pieChart.js')
+
+  
+
