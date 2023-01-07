@@ -1,0 +1,42 @@
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+    font-family: 'Readex Pro', sans-serif;
+    border-radius: 6px;
+    border: none;
+    background: #111111;
+    color: #666666;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .button:hover:enabled {
+    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.096), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1.5px rgba(186, 189, 196, 0.267);
+    background: #302f30;
+    outline: 0;
+  }
+  
+  .button:disabled,
+  button[disabled]{
+    border: none;
+    background-color: #1111118a;
+    color: #6666668a;
+  }
+  
+  #centerLineButton {
+    margin: 0;
+    position: absolute;
+    left: 42.5%;
+    top: 101%;
+  }
+
+  #centerPieButton {
+    position: absolute;
+    left: 38.5%;
+    bottom: -4.5%;
+  }

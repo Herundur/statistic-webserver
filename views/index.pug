@@ -30,7 +30,7 @@ block content
       div#discordButton
         span.dot
         div
-          a(href='https://discord.gg/xDcNMas9GP' target="_blank")
+          a(href='https://discord.gg/pzSn9vmeJm' target="_blank")
             img(id="discordLogo" src='../images/discord-logo.png' alt='Banura-Discord-Invitelink' width='50')
 
     // Alle Nutzer- & Botnachrichten
@@ -43,7 +43,8 @@ block content
       div(id="graphLine")
         canvas#lineChart
         div#centerLineButton
-          button#timeScaleLine Jahr
+          button#monthBarButton(class="button") Monat
+          button#yearBarButton(class="button") Jahr
 
     // Nutzerdaten
     .section
@@ -53,9 +54,11 @@ block content
 
       // Pie Chart
       div(id="graphPie")
-        canvas#pieChart()
+        canvas#pieChart
         div#centerPieButton
-          button#timeScalePie Woche
+          button#todayPieButton(class="button") Heute
+          button#weekPieButton(class="button") Woche
+          button#monthPieButton(class="button") Monat
 
   // SCRIPTS
   script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.14/fullpage.min.js' integrity='sha512-JEyqsBTR2woLAr79cq9g77k5aviE4ffJUwQ52NRRIsXQz5Xp2Am7vJD99hhc2q7lhvG0XCYs1cDGvl8d/t669Q==' crossorigin='anonymous' referrerpolicy='no-referrer')
@@ -78,5 +81,8 @@ block content
 
   script(src='../javascripts/pieChart.js', todayDataPie={todayDataPie}, todayLabelPie={todayLabelPie}, weekDataPie={weekDataPie}, weekLabelPie={weekLabelPie}, monthDataPie={monthDataPie}, monthLabelPie={monthLabelPie}, pieToday={pieToday}, pieWeekAgo={pieWeekAgo}, pieMonthAgo={pieMonthAgo}, pieUserCountMonth={pieUserCountMonth}, pieUserCountWeek={pieUserCountWeek})
 
+  script(src='../javascripts/barButtons.js')
+
+  script(src='../javascripts/pieButtons.js')
   
 

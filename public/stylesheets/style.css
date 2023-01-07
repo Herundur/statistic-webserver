@@ -3,82 +3,11 @@ body {
   font: 14px "Readex Pro", Helvetica, Arial, sans-serif;
 }
 
-/* BANURA LOGO */
-#img1 {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.705);
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.705);
-  -moz-box-shadow: 0 0 8px rgba(75, 58, 58, 0.705);
-  width: 600px;
-}
-
-/* "BANURA" TEXT */
-#img2{
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 850px;
-}
-
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background: #ffffff !important;
 }
 
-/* DISCORD BUTTO */
-#discordLogo {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 85px;
-}
 
-.dot {
-  background-position: revert-layer;
-  height: 75px;
-  width: 75px;
-  background-color: rgb(48, 48, 48);
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  bottom: 65px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.405);
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.405);
-  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.405);
-}
-
-#discordButton:hover .dot{
-  background-color: rgb(66, 66, 66);
-}
-
-.dot:hover{
-  background-color: rgb(66, 66, 66) !important;
-}
-
-/* LINE CHART */
 #graphLine {
   width: 1000px;
   height: 1000px;
@@ -89,7 +18,6 @@ body {
   transform: translateY(-50%);
 }
 
-/* LINE CHART PARAGRAPH */
 #paragraphLine {
   position: absolute;
   width: 700px;
@@ -106,35 +34,7 @@ body {
   text-shadow: 1px 1px 3px black;
 }
 
-/* LINE CHART BUTTON */
-#timeScaleLine {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 6px 14px;
-  font-family: 'Readex Pro', sans-serif;
-  border-radius: 6px;
-  border: none;
-  background: #161616;
-  color: #666666;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
 
-#timeScaleLine:hover {
-  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1.5px rgba(186, 189, 196, 0.5);
-  background: #302f30;
-  outline: 0;
-}
-
-#centerLineButton {
-  margin: 0;
-  position: absolute;
-  left: 48%;
-}
-
-/* PIE CHART */
 #graphPie {
   position: absolute;
   width: 1000px;
@@ -145,7 +45,6 @@ body {
   transform: translateY(-50%);
 }
 
-/* PIE CHART PARAGRAPH */
 #paragraphPie {
   position: absolute;
   width: 700px;
@@ -163,37 +62,7 @@ body {
   color: #ffffff;
 }
 
-/* PIE CHART BUTTON */
-#timeScalePie {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 6px 14px;
-  font-family: 'Readex Pro', sans-serif;
-  border-radius: 6px;
-  border: none;
-
-  background: #161616;
-  color: #666666;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-#timeScalePie:hover {
-  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1.5px rgba(186, 189, 196, 0.5);
-  background: #302f30;
-  outline: 0;
-}
-
-#centerPieButton {
-  position: absolute;
-  left: 39.5%;
-  bottom: 3%;
-}
-
 /* FADE IN ANIMATION */
-
 .rightFadeIn {
   opacity: 0;
   filter: blur(5px);
@@ -212,4 +81,19 @@ body {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+
+/* Blur on paragraph content change */
+@keyframes blur {
+  0% {
+    filter: blur(7.5px);
+  }
+
+  100% {
+    filter: blur(0px);
+  }
+}
+
+.blur {
+  animation: blur 0.75s ease-in-out normal;
 }

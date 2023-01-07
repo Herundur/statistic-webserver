@@ -1,0 +1,33 @@
+/* BANURA LOGO */
+#img1 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.705);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.705);
+    -moz-box-shadow: 0 0 8px rgba(75, 58, 58, 0.705);
+    width: 600px;
+  }
+  
+  /* "BANURA" TEXT */
+  #img2{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 850px;
+  }
